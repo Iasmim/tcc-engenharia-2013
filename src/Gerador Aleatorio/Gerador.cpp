@@ -18,14 +18,14 @@ int main() {
 	cin>>i;
 
 	srand (time (NULL)); // Gera uma 'random seed' baseada no retorno da funcao time()
-	int numero;
+	double numero;
 	 // Retorna um numero aleatorio entre 0 e 10
 
 	ofstream fout("aleatorios.txt"); // Cria arquivo para gravação
 	 //em modo texto
 	for (int j = 0; j < i; j++) {
-		numero = rand () % i;
-		fout << numero<<"\n" ;
+		numero = (double)rand ()/(numero + 1);
+		fout << (float)numero<<"\n" ;
 	}
 
 }
